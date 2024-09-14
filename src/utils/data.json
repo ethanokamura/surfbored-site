@@ -1,0 +1,21 @@
+{
+  "techstack":
+  [
+    {
+      "title": "Flutter",
+      "icon": "vscode-icons:file-type-flutter"
+    },
+    {
+      "title": "Bloc",
+      "icon": "file-icons:cubit"
+    },
+    {
+      "title": "Firebase",
+      "icon": "vscode-icons:file-type-firebase"
+    },
+    {
+      "title": "Algolia",
+      "icon": "la:algolia"
+    }
+  ]
+}

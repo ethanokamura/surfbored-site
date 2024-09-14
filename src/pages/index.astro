@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Tag from '../components/Tag.astro';
+import { Icon } from 'astro-icon';
+import { techstack } from '../utils/data.json';
+---
+
+<Layout>
+  <section class="h-screen justify-center items-center text-center grid gap-10">
+    <div class="flex flex-col items-center">
+      <h1 class="text-5xl md:text-[10em]">SurfBored</h1>
+      <div class="flex gap-1 items-center">
+        <p class="text-sm md:text-4xl text-text2 max-w-fit inline-block animate-typing overflow-hidden whitespace-nowrap w-fit">
+          Surf some boards and find cool sh*t to do.
+        </p>
+        <div class="animate-blink bg-text2 h-4 w-1 md:h-8 md:w-2"></div>
+      </div>
+    </div>
+    <p>Winter 2024</p>
+  </section>
+
+  <section class="flex w-full justify-center drop-shadow-black">
+    <div class="w-64 translate-y-[25px]">
+      <img class="rounded-lg" src="images/screenshot_02.png"/>
+    </div>
+    <div class="w-64 translate-y-[-25px]">
+      <img class="rounded-lg" src="images/screenshot_00.png"/>
+    </div>
+    <div class="w-64 translate-y-[25px]">
+      <img class="rounded-lg" src="images/screenshot_03.png"/>
+    </div>
+  </section>
+
+  <main class="max-w-4xl mx-auto">
+    <section>
+      <h1>Why use SurfBored? 🤔</h1>
+        <p>
+          Need something to do today? Create boards with your favorite activities! Or better yet, find someone else's board to find something new.
+        </p>
+        <p>
+          Have trouble choosing? SurfBored's shuffle feature will pick activities at random so you dont have to.
+        </p>
+        <p>
+          Search for tags to find new activites you'll love!
+        </p>
+    </section>
+
+    <section>
+      <h1 class="text-center">Tech Stack</h1>
+      <div class="flex flex-wrap justify-center gap-4">
+        {techstack.map((skill: any) =>
+        <Tag>
+          <div class="w-10">
+            <Icon name={skill.icon}/>
+          </div>
+          <p class="pr-2 text-xl font-semibold">{skill.title}</p>
+        </Tag>
+      )}
+      </div>
+    </section>
+
+    <section class="text-center items-center">
+      <h1>Github Repo 💻</h1>
+      <p>
+        Come check out our GitHub!
+      </p>
+      <a href="https://github.com/ethanokamura/surfbored" target="_blank" class="text-primary drop-shadow-glow">Link to Repository</a>
+    </section>
+
+    <section>
+      <h1>Frontend 🔥</h1>
+      <p>
+        The entire front end is written in Dart using the Flutter framework.
+      </p>
+      <p>
+        Flutter has allowed us to effectively create a cross platform application so we can bring our app to the user faster!
+      </p>
+    </section>
+
+    <section>
+      <h1>Handling Data and State 💾</h1>
+      <p>
+        To improve the end user's experience, the app uses cubits to handle state along side the work done in the backend.
+      </p>
+
+      <p>Basic Structure: UI ⇆ Cubit ⇆ Repository</p>
+      <ul>
+        <li>UI: the end point for the user</li>
+        <li>Cubit: emits and handles state changes</li>
+        <li>Repositories: handle requests and responses to the API's</li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h1>Backend 🔒</h1>
+      <p>
+        For the backend, we chose to use Firebase to handle authentication, storage, and cloud functions.
+        This has allowed us to ship our app as fast as possible.
+      </p>
+      <p>
+        To handle full-text search, we turned to Algolia which pairs perfectly with our Firebase data.
+      </p>
+    </section>
+  </main>
+</Layout>

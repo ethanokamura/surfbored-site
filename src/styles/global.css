@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html::-webkit-scrollbar { display: none; }
+  html {
+    @apply p-0 m-0 text-text bg-background font-rubik;
+  }
+  body {
+    @apply p-0 m-0 w-screen h-full;
+  }
+
+  h1, h2 { @apply font-bold; }
+  h1 { @apply text-4xl md:text-6xl transition-all ease-linear duration-300; }
+  h2 { @apply text-3xl md:text-4xl; }
+  span { @apply text-text3 text-sm md:text-base; }
+  p, li { @apply text-text2 text-lg md:text-xl; }
+  li {@apply text-text3;}
+
+  section {
+    @apply h-full w-full grid gap-4 py-20 items-center;
+  }
+}
