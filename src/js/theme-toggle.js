@@ -9,14 +9,15 @@ let isDarkMode = false;
 
 if (!('color-theme' in localStorage)) {
   localStorage.setItem('color-theme', 'light');
+  themeToggleLightIcon.classList.remove('hidden');
 }
 
 // Change the icons inside the button based on previous settings
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     themeToggleLightIcon.classList.remove('hidden');
-    isDarkMode = true;
-} else {
+  } else {
     themeToggleDarkIcon.classList.remove('hidden');
+    isDarkMode = true;
 }
 
 var themeToggleBtn = document.getElementById('theme-toggle');
