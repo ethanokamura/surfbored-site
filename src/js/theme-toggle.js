@@ -6,15 +6,20 @@ const screenshot02 = document.getElementById('screenshot-02');
 
 let isDarkMode = false;
 
-// Change the icons inside the button based on previous settings
+// On page load, set the correct icon visibility based on the theme
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     themeToggleLightIcon.classList.remove('hidden');
-    applyMode();
+    themeToggleDarkIcon.classList.add('hidden');
+    document.documentElement.classList.add('dark');
+    isDarkMode = true;
 } else {
     themeToggleDarkIcon.classList.remove('hidden');
-    isDarkMode = true;
-    applyMode();
+    themeToggleLightIcon.classList.add('hidden');
+    document.documentElement.classList.remove('dark');
+    isDarkMode = false;
 }
+
+applyMode();
 
 var themeToggleBtn = document.getElementById('theme-toggle');
 
