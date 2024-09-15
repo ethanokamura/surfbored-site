@@ -6,9 +6,9 @@ const screenshot02 = document.getElementById('screenshot-02');
 
 let isDarkMode = false;
 
+
 if (!('color-theme' in localStorage)) {
-  themeToggleLightIcon.classList.remove('hidden');
-  isDarkMode = true;
+  localStorage.setItem('color-theme', 'light');
 }
 
 // Change the icons inside the button based on previous settings
