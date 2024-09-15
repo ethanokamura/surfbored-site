@@ -4,18 +4,16 @@ const screenshot00 = document.getElementById('screenshot-00');
 const screenshot01 = document.getElementById('screenshot-01');
 const screenshot02 = document.getElementById('screenshot-02');
 
-let isDarkMode = false;
-
 // Change the icons inside the button based on previous settings
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     themeToggleLightIcon.classList.remove('hidden');
-  } else {
+} else {
     themeToggleDarkIcon.classList.remove('hidden');
-    isDarkMode = true;
 }
 
 var themeToggleBtn = document.getElementById('theme-toggle');
 
+let isDarkMode = localStorage.getItem('color-theme') === 'dark';
 
 applyMode();
 
