@@ -3,21 +3,30 @@ const plugin = require('tailwindcss/plugin');
 export default {
   content: ['./src/**/*.{astro,html}'],
   mode: 'jit',
+  darkMode: 'class',
 	theme: {
 		extend: {
       colors: {
-        'text': '#e1e6f0',
-        'text2': '#969eb0',
-        'text3': '#666e7d',
-        'darkbackground': '#080a0d',
-        'background': '#10141a',
-        'accent': '#1d2530',
-        'primary': '#61AFEF',
-        'secondary': '#151b24',
+        'text': '#1a1a1a',
+        'text2': '#7e8286',
+        'text3': '#8f8f8f',
+        'background': '#ffffff',
+        'accent': '#e5e8ea',
+        'primary': '#8875e0',
+        
+        'darktext': '#e1e6f0',
+        'darktext2': '#969eb0',
+        'darktext3': '#666e7d',
+        'darkbackground': '#10141a',
+        'darkaccent': '#1d2530',
+        'darkprimary': '#61AFEF',
       },
       dropShadow: {
         black: [
           "0px 0px 15px #000000"
+        ],
+        grey: [
+          "0px 0px 15px #bdbdbd"
         ],
       },
       fontFamily: {
