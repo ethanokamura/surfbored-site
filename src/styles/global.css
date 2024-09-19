@@ -48,7 +48,7 @@
     @apply banner top-0 items-start bg-gradient-to-b
   }
    .headnav a, button {
-    @apply hover:scale-125 transition-all ease-linear duration-100 text-sm md:text-xl;
+    @apply md:hover:scale-125 hover:text-text3 dark:hover:text-darktext3 transition-all ease-linear duration-100 text-sm md:text-xl;
   }
    .foot {
     @apply banner bottom-0 items-end bg-gradient-to-t
