@@ -1,12 +1,16 @@
 ---
 import Head from '../components/Head.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
 import '/src/styles/global.css';
+const currentPath = Astro.url.pathname;
 ---
 <!doctype html>
 <html lang="en">
   <Head title='SurfBored' description='A landing page for the SurfBored app'/>
-	<body class="px-5 md:px-10">
+	<body>
+    <NavBar path={currentPath}/>
     <slot/>
-    <script src="../utils/theme.js"></script>
+    <Footer title="SurfBored"/>
 	</body>
 </html>
