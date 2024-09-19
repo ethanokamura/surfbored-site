@@ -1,17 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Tag from '../components/Tag.astro';
-import { Icon } from 'astro-icon';
-import { techstack } from '../utils/data.json';
 ---
   
 <Layout>
-  <div class="fixed right-5 top-5">
-    <button id="theme-toggle" type="button" class="text-text2 dark:text-darktext2 hover:bg-accent dark:hover:bg-darkaccent rounded-full text-sm p-2.5">
-      <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="#1a1a1a" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-      <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="#e1e6f0" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-    </button>
-  </div>
   <section class="h-screen flex flex-col justify-center text-center gap-10">
     <div class="flex flex-col items-center">
       <h1 class="text-5xl md:text-[10em]">SurfBored</h1>
@@ -22,83 +13,41 @@ import { techstack } from '../utils/data.json';
         <div class="animate-blink bg-text2  dark:bg-darktext2  h-4 w-1 md:h-8 md:w-2"></div>
       </div>
     </div>
-    <p>Winter 2024</p>
+    <p>Summer 2025</p>
   </section>
 
-  <section class="flex w-full justify-center drop-shadow-grey dark:drop-shadow-black">
-    <div class="w-64 translate-y-[25px]">
-      <img class="rounded-lg" id="screenshot-01" src="images/light_screenshot_01.png"/>
-    </div>
-    <div class="w-64 translate-y-[-25px]">
-      <img class="rounded-lg" id="screenshot-00" src="images/light_screenshot_00.png"/>
-    </div>
-    <div class="w-64 translate-y-[25px]">
-      <img class="rounded-lg" id="screenshot-02" src="images/light_screenshot_02.png"/>
-    </div>
+  <section class="py-0 pb-20 flex w-full justify-center drop-shadow-grey dark:drop-shadow-black">
+    <div class="screenshot translate-y-[25px] bg-[url(/images/light_screenshot_01.png)] dark:bg-[url(/images/screenshot_01.png)]"></div>
+    <div class="screenshot translate-y-[-25px] bg-[url(/images/light_screenshot_00.png)] dark:bg-[url(/images/screenshot_00.png)]"></div>
+    <div class="screenshot translate-y-[25px] bg-[url(/images/light_screenshot_02.png)] dark:bg-[url(/images/screenshot_02.png)]"></div>
   </section>
 
   <main>
     <section>
-      <h1>Why use SurfBored? 🤔</h1>
-        <p>Need something to do today? Create boards with your favorite activities! Or better yet, find someone else's board to find something new.</p>
-        <p>Have trouble choosing? SurfBored's shuffle feature will pick activities at random so you dont have to.</p>
-        <p>Search for tags to find new activites you'll love!</p>
+      <h1>What is SurfBored? 🤔</h1>
+      <p>This is a social media app built for people who don't use social media</p>
+      <p>The goal of SurfBored is to help you unplug. Find new activities so you can finally put down your phone and create some real memories.</p>
     </section>
-
-    <section class="text-center">
-      <h1>Tech Stack</h1>
-      <div class="flex flex-wrap justify-center gap-4">
-        {techstack.map((skill: any) =>
-          <Tag>
-            <div class="w-10"><Icon name={skill.icon}/></div>
-            <p class="pr-2 text-xl font-semibold">{skill.title}</p>
-          </Tag>
-        )}
-      </div>
-    </section>
-
-    <section class="text-center">
-      <h1>Github Repo 💻</h1>
-      <p>
-        Come check out our GitHub!
-      </p>
-      <a href="https://github.com/ethanokamura/surfbored" target="_blank" class="text-primary dark:text-darkprimary drop-shadow-glow">Link to Repository</a>
-    </section>
-
     <section>
-      <h1>Frontend 🔥</h1>
-      <p>
-        The entire front end is written in Dart using the Flutter framework.
-      </p>
-      <p>
-        Flutter has allowed us to effectively create a cross platform application so we can bring our app to the user faster!
-      </p>
+      <h1>Why use SurfBored? 🤨</h1>
+      <p>Not sure what to do this weekend? For a date? What food to cook? SurfBored has a little thing for everyone.</p>
+      <p>Need something to do today? Create boards with your favorite activities! Or better yet, find someone else's board to find something new.</p>
+      <p>Have trouble choosing? SurfBored's shuffle feature will pick activities at random so you dont have to.</p>
+      <p>SurfBored is an app where you can keep all your favorite activities in one place. It allows you to save and share other people's favoirite activities.</p>
+      <p>Search for tags to find new activites you'll love!</p>
     </section>
-
     <section>
-      <h1>Handling Data and State 💾</h1>
-      <p>
-        To improve the end user's experience, the app uses cubits to handle state along side the work done in the backend.
-      </p>
-
-      <p>Basic Structure: UI ⇆ Cubit ⇆ Repository</p>
-      <ul>
-        <li>UI: the end point for the user</li>
-        <li>Cubit: emits and handles state changes</li>
-        <li>Repositories: handle requests and responses to the API's</li>
-      </ul>
-
+      <h1>How does it work? 🧐</h1>
+      <p>Create and share activities by creating a post!</p>
+      <p>Create and share collections of your favorite activites via boards.</p>
+      <p>Find an activity you like? Add it to the board of your choosing. Find a board you like? Like it and add it to you library of boards.</p>
     </section>
-
     <section>
-      <h1>Backend 🔒</h1>
-      <p>
-        For the backend, we chose to use Firebase to handle authentication, storage, and cloud functions.
-        This has allowed us to ship our app as fast as possible.
-      </p>
-      <p>
-        To handle full-text search, we turned to Algolia which pairs perfectly with our Firebase data.
-      </p>
+      <h1>When is it avaliable? 🤓</h1>
+      <p>SurfBored will open a waitlist this coming Winter (2024)</p>
+      <p>Get notified of any updates by filling out <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSejiIuK1d5chok5KOmYGOqwNz1zmQuD4C0xUmG84In8S7ke4g/viewform?usp=sf_link" target="_blank">this</a> form</p>
+      <p>The first 1000 members who join will get early access via access codes in April of 2025</p>
+      <p>Version 0.0.1 is set to release to the public in June of 2025</p>
     </section>
   </main>
 </Layout>

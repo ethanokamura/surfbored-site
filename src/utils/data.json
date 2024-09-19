@@ -17,5 +17,69 @@
       "title": "Algolia",
       "icon": "la:algolia"
     }
+  ],
+
+  "roadmap":
+  [
+    {
+      "date": "May 2024",
+      "complete": true,
+      "goal": "Planning Phase"
+    },
+    {
+      "date": "July 2024",
+      "complete": true,
+      "goal": "Start Production"
+    },
+    {
+      "date": "August 2024",
+      "complete": true,
+      "goal": "Polish Fundamentals"
+    },
+    {
+      "date": "September 2024",
+      "complete": true,
+      "goal": "Implement Search and Other Necessary Features"
+    },
+    {
+      "date": "October 2024",
+      "complete": false,
+      "goal": "Add Commenting to Posts"
+    },
+    {
+      "date": "November 2024",
+      "complete": false,
+      "goal": "Add Collaborative Boards"
+    },
+    {
+      "date": "December 2024",
+      "complete": false,
+      "goal": "Open Waitlist"
+    },
+    {
+      "date": "January 2025",
+      "complete": false,
+      "goal": "Live Events"
+    },
+    {
+      "date": "Feburary 2025",
+      "complete": false,
+      "goal": "Recommendation System"
+    },
+    {
+      "date": "March 2025",
+      "complete": false,
+      "goal": "Testing"
+    },
+    {
+      "date": "April 2025",
+      "complete": false,
+      "goal": "Private Launch"
+    },
+    {
+      "date": "June 2025",
+      "complete": false,
+      "goal": "Public Launch v0.0.1"
+    }    
   ]
 }

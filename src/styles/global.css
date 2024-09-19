@@ -5,17 +5,19 @@
 @layer base {
   html::-webkit-scrollbar { display: none; }
   html {
-    @apply p-0 m-0 text-text bg-background font-rubik;
+    @apply w-screen h-screen p-0 m-0 text-text bg-background font-rubik;
   }
   html.dark {
     @apply p-0 m-0 text-darktext bg-darkbackground font-rubik;
   }
   body {
-    @apply p-0 m-0 w-screen h-full;
+    @apply p-0 m-0 w-screen px-5 md:px-10 flex flex-col justify-between items-center;
   }
+  main { @apply max-w-4xl mx-auto pb-40; }
+  section {@apply h-full w-full grid gap-4 py-10 items-center;}
 
-  h1, h2 { @apply font-bold; }
-  h1 { @apply text-4xl md:text-6xl transition-all ease-linear duration-300; }
+  h1, h2 { @apply font-bold transition-all ease-linear duration-300; }
+  h1 { @apply text-4xl md:text-6xl; }
   h2 { @apply text-3xl md:text-4xl; }
   span { @apply text-text3 text-sm md:text-base; }
   span.dark { @apply text-darktext3 text-sm md:text-base; }
@@ -23,13 +25,42 @@
   p.dark, li.dark { @apply text-darktext2 text-lg md:text-xl; }
   li {@apply text-text3;}
   li.dark {@apply text-darktext3;}
-  main { @apply max-w-4xl mx-auto; }
-  section {
-    @apply h-full w-full grid gap-4 py-20 items-center;
+  a {@apply font-semibold text-lg md:text-xl;}
+}
+
+@layer components {
+  .hidden {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .screenshot {
+    @apply rounded-xl w-64 aspect-[9/19.5] bg-cover z-10;
+  }
+  .card {
+    @apply w-full px-4 py-2 isolate rounded-xl bg-accent dark:bg-darkaccent grid gap-2;
+  }
+  .card h1 {
+    @apply  text-3xl md:text-4xl;
+  }
+  .headnav {
+    @apply banner top-0 items-start bg-gradient-to-b
+  }
+   .headnav a, button {
+    @apply hover:scale-125 transition-all ease-linear duration-100 text-sm md:text-xl;
+  }
+   .foot {
+    @apply banner bottom-0 items-end bg-gradient-to-t
+  }
+  .banner {
+    @apply fixed left-0 w-screen h-48 py-4 px-6 flex z-20 
+    bg-gradient-to-b from-background dark:from-darkbackground to-transparent
+    text-lg md:text-xl font-medium dark:text-darktext2 text-text2;
+  }
+  .link {
+    @apply text-primary dark:text-darkprimary;
   }
 
 }
 
-.hidden {
-    display: none;
-}
