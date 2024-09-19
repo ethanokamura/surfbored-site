@@ -51,7 +51,7 @@
     @apply md:hover:scale-125 hover:text-text3 dark:hover:text-darktext3 transition-all ease-linear duration-100 text-sm md:text-xl;
   }
    .foot {
-    @apply banner bottom-0 items-end bg-gradient-to-t
+    @apply banner bottom-0 items-end bg-gradient-to-t text-sm md:text-xl
   }
   .banner {
     @apply fixed left-0 w-screen h-32 py-4 px-6 flex z-20 
