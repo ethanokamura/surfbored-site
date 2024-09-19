@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Tag from '../components/Tag.astro';
+import { Icon } from 'astro-icon';
+import { techstack } from '../utils/data.json';
+---
+  
+<Layout>
+  <main class="pt-40">
+    <div class="text-center">
+      <h1 class="text-5xl md:text-[10em]">SurfBored</h1>
+      <p class="text-sm md:text-4xl">Under the hood:</p>
+    </div>
+    <section class="text-center">
+      <h1>Tech Stack</h1>
+      <div class="flex flex-wrap justify-center gap-4">
+        {techstack.map((skill: any) =>
+          <Tag>
+            <div class="w-10"><Icon name={skill.icon}/></div>
+            <p class="pr-2 text-xl font-semibold">{skill.title}</p>
+          </Tag>
+        )}
+      </div>
+    </section>
+
+    <section>
+      <h1>Frontend 🔥</h1>
+      <p>The entire front end is written in Dart using the Flutter framework.</p>
+      <p>Flutter has allowed us to effectively create a cross platform application so we can bring our app to the user faster!</p>
+    </section>
+
+    <section>
+      <h1>Handling Data and State 💾</h1>
+      <p>
+        To improve the end user's experience, the app uses cubits to handle state along side the work done in the backend.
+      </p>
+
+      <p>Basic Structure: UI ⇆ Cubit ⇆ Repository</p>
+      <ul>
+        <li>UI: the end point for the user</li>
+        <li>Cubit: emits and handles state changes</li>
+        <li>Repositories: handle requests and responses to the API's</li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h1>Backend 🔒</h1>
+      <p>
+        For the backend, we chose to use Firebase to handle authentication, storage, and cloud functions.
+        This has allowed us to ship our app as fast as possible.
+      </p>
+      <p>
+        To handle full-text search, we turned to Algolia which pairs perfectly with our Firebase data.
+      </p>
+    </section>
+  </main>
+</Layout>
