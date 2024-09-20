@@ -7,7 +7,7 @@ const { path } = Astro.props;
 ---
 
 <div class="headnav">
-  <div class={`flex sm:flex-wrap items-center gap-4 ${path === "/" ? "justify-end" : "justify-between"} sm:justify-center w-full`}>
+  <div class={`flex flex-wrap  items-center gap-4 ${path === "/" ? "md:justify-end" : "md:justify-between"} justify-center w-full`}>
     { path === "/" ? <></> : <a href="/">Home</a> }
     <div class="flex gap-4 md:gap-10 items-center">
       <a href="/contact">Contact Us</a>
