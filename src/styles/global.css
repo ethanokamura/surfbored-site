@@ -59,8 +59,10 @@
     bg-gradient-to-b from-background dark:from-darkbackground to-transparent
     text-lg md:text-xl font-medium dark:text-darktext2 text-text2;
   }
+
   .link {
-    @apply text-primary dark:text-darkprimary;
+    @apply px-4 py-2 rounded-lg hover:scale-150 transition-all ease-linear duration-100 w-fit
+    bg-primary dark:bg-darkprimary text-background dark:text-darkbackground
   }
 
 }
