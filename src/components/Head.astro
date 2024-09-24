@@ -36,6 +36,14 @@ const url = 'https://www.surfbored.app/';
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={image}>
   <ViewTransitions/>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Website",
+      "url": "https://www.surfboard.app",
+      "logo": "https://www.surfboard.app/logo.png"
+    }
+    </script>
   <script is:inline>
     const setTheme = () => {
       const theme = (() => {
