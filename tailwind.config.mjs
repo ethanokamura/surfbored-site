@@ -2,6 +2,7 @@
 const plugin = require('tailwindcss/plugin');
 export default {
   content: ['./src/**/*.{astro,html}'],
+  purge: ['./src/**/*.{astro,html}'],
   mode: 'jit',
   darkMode: 'class',
 	theme: {

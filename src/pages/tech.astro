@@ -9,9 +9,9 @@ import { techstack } from '../utils/data.json';
   <main class="pt-40">
     <div class="text-center">
       <h1 class="text-5xl md:text-[10em]">SurfBored</h1>
-      <p class="text-sm md:text-4xl">Under the hood:</p>
+      <h2>Under the hood:</h2>
     </div>
-    <section class="text-center">
+    <acticle class="text-center">
       <h1>Tech Stack</h1>
       <div class="flex flex-wrap justify-center gap-4">
         {techstack.map((skill: any) =>
@@ -21,15 +21,15 @@ import { techstack } from '../utils/data.json';
           </Tag>
         )}
       </div>
-    </section>
+    </acticle>
 
-    <section>
+    <acticle>
       <h1>Frontend 🔥</h1>
       <p>The entire frontend is written in Dart using the Flutter framework.</p>
       <p>Flutter allows us to effectively create a cross-platform application, bringing our app to users faster!</p>
-    </section>
+    </acticle>
     
-    <section>
+    <acticle>
       <h1>Handling Data and State 💾</h1>
       <p>
         To improve the end-user experience, the app uses Cubits to handle state alongside backend processes.
@@ -41,9 +41,9 @@ import { techstack } from '../utils/data.json';
         <li>Cubit: manages and emits state changes</li>
         <li>Repository: handles API requests and responses</li>
       </ul>
-    </section>
+    </acticle>
     
-    <section>
+    <acticle>
       <h1>Backend 🔒</h1>
       <p>
         For the backend, we chose Firebase to handle authentication, storage, and cloud functions, enabling us to ship our app quickly.
@@ -51,7 +51,7 @@ import { techstack } from '../utils/data.json';
       <p>
         For full-text search, we integrated Algolia, which pairs seamlessly with our Firebase data.
       </p>
-    </section>
+    </acticle>
     
   </main>
 </Layout>
