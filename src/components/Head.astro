@@ -7,7 +7,6 @@ interface Props {
 }
 const { title, description } = Astro.props;
 const image = "/images/face.png";
-const wave = "images/favicon.svg"
 const url = 'https://www.surfbored.app/';
 ---
 
@@ -21,7 +20,7 @@ const url = 'https://www.surfbored.app/';
   <meta name="keywords" content="Surf Bored, SurfBored, Mobile App, App, SurfBoard, Surf Board">
   <meta name="author" content="Ethan Okamura"/>
   <meta property="type" content="website" />
-  <link rel="icon" type="image/svg+xml," href={wave}/>
+  <link rel="icon" type="image/svg+xml," href="images/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
