@@ -3,19 +3,31 @@
   [
     {
       "title": "Flutter",
-      "icon": "vscode-icons:file-type-flutter"
+      "icon": "devicon:flutter"
     },
     {
       "title": "Bloc",
-      "icon": "file-icons:cubit"
+      "icon": "vscode-icons:folder-type-cubit"
     },
     {
-      "title": "Firebase",
-      "icon": "vscode-icons:file-type-firebase"
+      "title": "Supabase",
+      "icon": "devicon:supabase"
     },
     {
-      "title": "Algolia",
-      "icon": "la:algolia"
+      "title": "Twilio",
+      "icon": "logos:twilio-icon"
+    },
+    {
+      "title": "Deno",
+      "icon": "vscode-icons:file-type-deno"
+    },
+    {
+      "title": "Postgres",
+      "icon": "devicon:postgresql"
+    },
+    {
+      "title": "SQLite",
+      "icon": "devicon:sqlite"
     }
   ],
 

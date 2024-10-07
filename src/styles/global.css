@@ -46,17 +46,17 @@
     @apply  text-3xl md:text-4xl;
   }
   .headnav {
-    @apply banner top-0 items-start bg-gradient-to-b from-background dark:from-darkbackground to-transparent
+    @apply top-0 items-start fixed left-0 w-screen h-32 py-4 px-6 flex z-20 
+    bg-gradient-to-b from-background dark:from-darkbackground to-transparent
+    text-lg md:text-xl font-medium dark:text-darktext2 text-text2;
   }
    .headnav a, button {
     @apply md:hover:scale-125 hover:text-text3 dark:hover:text-darktext3 transition-all ease-linear duration-100 text-base md:text-xl;
   }
    .foot {
-    @apply banner bottom-0 items-end bg-gradient-to-t text-sm md:text-xl from-background dark:from-darkbackground to-transparent
-  }
-  .banner {
-    @apply fixed left-0 w-screen h-32 py-4 px-6 flex z-20 
-    text-lg md:text-xl font-medium dark:text-darktext2 text-text2;
+    @apply bottom-0 items-end bg-gradient-to-t text-sm md:text-xl fixed left-0 w-screen h-32 py-4 px-6 flex z-20 
+    from-background dark:from-darkbackground to-transparent
+     font-medium dark:text-darktext2 text-text2
   }
 
   .link {

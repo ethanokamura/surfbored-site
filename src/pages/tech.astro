@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Tag from '../components/Tag.astro';
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components'
 import { techstack } from '../utils/data.json';
 ---
   
@@ -16,7 +16,7 @@ import { techstack } from '../utils/data.json';
       <div class="flex flex-wrap justify-center gap-4">
         {techstack.map((skill: any) =>
           <Tag>
-            <div class="w-10"><Icon name={skill.icon}/></div>
+            <Icon size={40} name={skill.icon}/>
             <p class="pr-2 text-xl font-semibold">{skill.title}</p>
           </Tag>
         )}

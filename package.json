@@ -1,7 +1,7 @@
 {
-  "name": "ethanokamura.io",
+  "name": "surfbored.app",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,23 +10,26 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.1",
     "@fontsource/jetbrains-mono": "^5.0.17",
     "@fontsource/manrope": "^5.0.17",
+    "@iconify-json/devicon": "^1.2.3",
+    "@iconify-json/logos": "^1.2.2",
+    "@iconify-json/vscode-icons": "^1.2.2",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
-    "astro": "^3.5.4",
+    "astro": "^4.15.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "svelte": "^4.2.3",
-    "typescript": "^5.2.2"
+    "svelte": "^4.2.3"
   },
   "devDependencies": {
-    "astro-icon": "^0.8.1",
+    "astro-icon": "^1.1.1",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
     "vite": "^5.0.4"
   }
 }
