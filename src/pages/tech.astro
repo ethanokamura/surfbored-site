@@ -27,30 +27,29 @@ import { techstack } from '../utils/data.json';
       <h1>Frontend 🔥</h1>
       <p>The entire frontend is written in Dart using the Flutter framework.</p>
       <p>Flutter allows us to effectively create a cross-platform application, bringing our app to users faster!</p>
+      <p>We used a local first approach so the user gets the data as fast as possible.</p>
+      <p>Thanks to HiveDB we are able to cache incoming data to allow for a better user experience</p>
     </acticle>
     
     <acticle>
       <h1>Handling Data and State 💾</h1>
-      <p>
-        To improve the end-user experience, the app uses Cubits to handle state alongside backend processes.
-      </p>
-    
+      <p>To improve the end-user experience, the app uses Cubits to handle state alongside backend processes.</p>
       <p>Basic Structure: UI ⇆ Cubit ⇆ Repository</p>
       <ul>
         <li>UI: the user's interface</li>
         <li>Cubit: manages and emits state changes</li>
         <li>Repository: handles API requests and responses</li>
       </ul>
+      <p>Data fetched from our PostgreSQL database is temporarly stored in Hive and synced using PowerSync</p>
     </acticle>
     
     <acticle>
       <h1>Backend 🔒</h1>
       <p>
-        For the backend, we chose Firebase to handle authentication, storage, and cloud functions, enabling us to ship our app quickly.
+        For the backend, we chose Twilio to handle authentication and Supabase for storage, and edge functions, enabling us to ship our app quickly.
       </p>
-      <p>
-        For full-text search, we integrated Algolia, which pairs seamlessly with our Firebase data.
-      </p>
+      <p>To help cache data, we implemented cloud functions using deno and typescript.</p>
+      <p>For full-text search, we took advatage of Supabase's textsearch queries.</p>
     </acticle>
     
   </main>
